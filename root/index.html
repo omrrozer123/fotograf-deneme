@@ -11,17 +11,28 @@
             font-family: 'Arial', sans-serif;
             text-align: center;
             color: white;
-            background: black;
+            background: url('https://omrrozer123.github.io/fotograf-deneme/images/exer1.jpg') no-repeat center center/cover;
+        }
+        .overlay {
+            background: rgba(0, 0, 0, 0.6);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
         }
         .title {
-            margin-top: 20vh;
             font-size: 50px;
             font-family: 'Brush Script MT', cursive;
             font-weight: bold;
             text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
         }
         .content {
-            margin-top: 50px;
+            margin-top: 30px;
         }
         .btn {
             display: block;
@@ -43,10 +54,12 @@
     </style>
 </head>
 <body>
-    <div class="title">M&H Wedding</div>
-    <div class="content">
-        <button class="btn" onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSel2H9XLYrdMCOdw2Hju3sz_E4UAvJ1FkSrFXC000LlHdnIJw/viewform?usp=header', '_blank')">📤 Fotoğraf Yükle</button>
-        <button class="btn" onclick="window.open('https://drive.google.com/drive/folders/1eE8sZXwuOi_OXehNeRaaXga-M5u5Npcd0NwFMBHrzAFXitL4aCN_7Ijjj90LtPW6vB6GsBbI?usp=drive_link', '_blank')">📂 Yüklenen Fotoğrafları Gör</button>
+    <div class="overlay">
+        <div class="title">M&H Wedding</div>
+        <div class="content">
+            <button class="btn" onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSel2H9XLYrdMCOdw2Hju3sz_E4UAvJ1FkSrFXC000LlHdnIJw/viewform?usp=header', '_blank')">📤 Fotoğraf Yükle</button>
+            <button class="btn" onclick="window.open('https://drive.google.com/drive/folders/1eE8sZXwuOi_OXehNeRaaXga-M5u5Npcd0NwFMBHrzAFXitL4aCN_7Ijjj90LtPW6vB6GsBbI?usp=drive_link', '_blank')">📂 Yüklenen Fotoğrafları Gör</button>
+        </div>
     </div>
 </body>
 </html>
