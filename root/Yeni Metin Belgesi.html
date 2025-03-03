@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M&H Wedding</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            color: white;
+            overflow-x: hidden;
+        }
+        .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: url('data:image/jpeg;base64,/mnt/data/WhatsApp Görsel 2024-11-15 saat 21.44.50_6bfa3b31.jpg') no-repeat center center/cover;
+            transition: filter 0.3s ease;
+        }
+        .blurred {
+            filter: blur(10px);
+        }
+        .title {
+            position: absolute;
+            top: 40%;
+            width: 100%;
+            font-size: 50px;
+            font-family: 'Brush Script MT', cursive;
+            font-weight: bold;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+        }
+        .content {
+            position: relative;
+            margin-top: 100vh;
+            padding: 50px 0;
+            background: rgba(0, 0, 0, 0.6);
+        }
+        .btn {
+            display: block;
+            margin: 20px auto;
+            padding: 15px 30px;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: 2px solid white;
+            cursor: pointer;
+            border-radius: 25px;
+            font-size: 18px;
+            font-weight: bold;
+            transition: 0.3s;
+            backdrop-filter: blur(10px);
+        }
+        .btn:hover {
+            background: rgba(255, 255, 255, 0.4);
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="background" id="bg"></div>
+    <div class="title">M&H Wedding</div>
+    <div class="content">
+        <button class="btn" onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSel2H9XLYrdMCOdw2Hju3sz_E4UAvJ1FkSrFXC000LlHdnIJw/viewform?usp=header', '_blank')">📤 Fotoğraf Yükle</button>
+        <button class="btn" onclick="window.open('https://drive.google.com/drive/folders/1eE8sZXwuOi_OXehNeRaaXga-M5u5Npcd0NwFMBHrzAFXitL4aCN_7Ijjj90LtPW6vB6GsBbI?usp=drive_link', '_blank')">📂 Yüklenen Fotoğrafları Gör</button>
+    </div>
+    
+    <script>
+        window.addEventListener('scroll', function() {
+            let bg = document.getElementById('bg');
+            if (window.scrollY > 50) {
+                bg.classList.add('blurred');
+            } else {
+                bg.classList.remove('blurred');
+            }
+        });
+    </script>
+</body>
+</html>
